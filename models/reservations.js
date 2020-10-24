@@ -1,9 +1,16 @@
 const mongoose = require('mongoose');
 
-const reservationsSchema = mongoose.Schema({
-	name: String
+const reservationSchema = mongoose.Schema({
+	name: {type: String, required: true},
+  email: {type: String},
+  phone: {type: Number, required: true},
+  date: {type: Date, required: true},
+  seating: {type: Number, required: true},
+  message: {type: String}
+
+
 });
 
-const Reservations = mongoose.model('Reservations', reservationsSchema);
+const Reservation = mongoose.model('Reservation', reservationSchema);
 
-module.exports = Reservations;
+module.exports = Reservation;
