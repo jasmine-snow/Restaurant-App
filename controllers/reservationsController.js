@@ -39,13 +39,37 @@ router.get('/index', (req, res)=>{
 	})
 });
 
-//reservation goes to show
-// router.get('/:id', (req, res)=>{
-// 	Reservations.findById(req.params.id, (err, foundReservations)=>{
-// 		res.render('reservations/show.ejs', {
-// 			reservations: foundReservations
-// 		});
-// 	});
+
+router.get('/:id', (req, res)=>{
+	Reservation.findById(req.params.id, (err, foundReservations)=>{
+		res.render('reservations/show.ejs', {
+			reservations: foundReservations,
+		});
+	});
+});
+
+router.delete('/:id', (req, res)=>{
+	Reservation.findByIdAndRemove(req.params.id, ()=>{
+		res.redirect('/reservations/index');
+	});
+});
+
+router.get('/:id/edit', (req, res)=>{
+	Reservation.findById(req.params.id, (err, foundReservations)=>{
+		res.render('reservations/edit.ejs', {
+			reservations: foundReservations
+		});
+	});
+});
+
+router.put('/:id', (req, res)=>{
+	Reservation.findByIdAndUpdate(req.params.id, req.body, ()=>{
+		res.redirect('/reservations/index');
+	});
+});
+// router.get('/show:id', (req, res)=>{
+// 		res.render('reservations/show.ejs')
 // });
+
 
 module.exports = router;

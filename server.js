@@ -6,7 +6,14 @@ const PORT = 3000;
 
 const mongoose = require('mongoose');
 
+const methodOverride = require('method-override')
+
+app.use(methodOverride('_method'));
+
+
 app.use(express.urlencoded({extended:false}));
+
+
 
 const mongodbURI = 'mongodb://localhost:27017/reservations'
 

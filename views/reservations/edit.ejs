@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<header>
+			<h1>Edit <%=reservations.name%>'s Info</h1>
+			<nav>
+				<ul>
+					<li>
+						<a href="/home">Home</a>
+					</li>
+					<li>
+						<a href="/reservations/index">reservations Index</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<h2>Author Attributes:</h2>
+			<form action="/reservations/<%=reservations._id%>?_method=PUT" method="post">
+				<input type="text" name="name" value="<%=reservations.name%>"/><br/>
+        <input type="number" name="phone" value="<%=reservations.phone%>"/><br/>
+        <input type="email" name="email" value="<%=reservations.email%>"/><br/>
+        <input type="text" name="date" value="<%=reservations.date%>"/><br/>
+        <input type="number" name="seating" value="<%=reservations.seating%>"/><br/>
+        <input type="text" name="message" value="<%=reservations.message%>"/><br/>
+
+
+
+
+
+				<input type="submit" value="Update Reservations"/>
+			</form>
+		</main>
+	</body>
+</html>
