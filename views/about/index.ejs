@@ -4,14 +4,96 @@
 <head>
 	<meta charset="utf-8">
 	<title>About</title>
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital@1&display=swap" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 	<style media="screen">
+		h1 {
+			padding: 35px;
+			font-family: 'Playfair Display SC', serif;
+		}
+
 		li {
 			list-style-type: none;
 		}
+
+		h2 {
+			padding: 10px;
+			margin-top: 150px;
+			font-family: 'Cinzel Decorative', cursive;
+		}
+
+		p {
+			margin-left: 100px;
+			margin-right: 100px;
+			display: center;
+		}
+
+		a {
+			color: black;
+			text-decoration: none;
+
+		}
+
+
+		.nav-item {
+			color: black;
+		}
+
+		.footer {
+			background-color: #F1F1F1;
+			text-align: right;
+			padding: 10px;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		.button {
+			margin-top: 30px;
+
+		}
+
+		.page-button {
+			transition-duration: 0.4s;
+			padding: 5px;
+			background-color: white;
+
+		}
+
+		.page-button:hover {
+			background-color: grey;
+			color: white;
+		}
+
+		.row {
+			display: flex;
+		}
+
+		.column {
+			flex: 50%;
+			height: 700px;
+			text-align: center;
+		}
+
+
+
+		#main {
+			width: 100%;
+			height: 50%;
+		}
+
+		#column1 {
+			width: 100%;
+			height: 700px;
+
+		}
 	</style>
+
+
 </head>
 
 <body>
@@ -45,11 +127,44 @@
 						</div>
 					</nav>
 
-
-
-
-
 	</header>
+	<section class="row">
+		<section class="column">
+			<section class="inner-column">
+				<h2>About</h2>
+				<p>Cras in augue dignissim libero vulputate tincidunt non vel nisl.
+					Duis id odio aliquet, lobortis est at, porta risus. Mauris lacus enim,
+					elementum vel metus a, hendrerit efficitur mi. Pellentesque imperdiet sapien
+					ac mi aliquet rutrum. Donec sem orci, pharetra vehicula vestibulum tincidunt,
+					tempor id augue. Morbi vulputate lorem vitae vehicula elementum.
+
+				</p>
+			</section>
+
+		</section>
+		<section class="column">
+			<img id="column1" src="img/powder_sugar_snow.jpg" width="600px" height="px" alt="">
+		</section>
+	</section>
+	<section class="row">
+		<section class="column" style="background-color:;">
+			<img id="column1" src="img/map.jpg" width="600px" height="px" alt="">
+		</section>
+		<section class="column">
+			<section class="inner-column">
+				<h2>Location</h2>
+				<p> Nullam scelerisque eget risus ac consectetur. Pellentesque
+					tristique nunc non orci condimentum commodo. Sed dictum volutpat arcu, sed cursus dui laoreet
+					 sit amet. Aenean enim ipsum, tincidunt ac hendrerit porta, sollicitudin eget enim.
+				<section class="button">
+					<button class="page-button" type="button" name="button"><a href="/home">Back</a></button>
+				</section>
+
+				</p>
+			</section>
+		</section>
+
+	</section>
 </body>
 
 </html>
