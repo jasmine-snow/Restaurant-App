@@ -2,11 +2,16 @@ const express = require('express');
 
 const app = express();
 
-const PORT = 3000;
 
 const mongoose = require('mongoose');
 
 const methodOverride = require('method-override')
+
+require('dotenv').config()
+
+
+const PORT = process.env.PORT
+
 
 app.use(methodOverride('_method'));
 
@@ -16,7 +21,8 @@ app.use(express.urlencoded({extended:false}));
 
 
 
-const mongodbURI = 'mongodb://localhost:27017/reservations'
+const mongodbURI = process.env.MONGODBURI
+
 
 mongoose.connect(mongodbURI, { useNewUrlParser: true}, { useUnifiedTopology: true });
 mongoose.connection.on('open', ()=>{
@@ -44,5 +50,5 @@ app.get('/home', (req, res)=>{
 });
 
 app.listen(PORT, ()=> {
-	console.log("Listening to port")
+	console.log("Listening to port:", PORT)
 })

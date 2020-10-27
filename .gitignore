@@ -1,4 +1,4 @@
-.env
+
 node_modules
 # Compiled source #
 ###################
@@ -45,7 +45,6 @@ Thumbs.db
 ##############
 node_modules
 .env
-
 # Sass #
 ##############
 .sass-cache/
