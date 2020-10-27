@@ -42,7 +42,7 @@ const reservationsController = require('./controllers/reservationsController');
 app.use('/reservations', reservationsController);
 
 app.get('/', (req, res)=>{
-	res.render('/reservations/index.ejs');
+	res.render('home.ejs');
 });
 
 app.get('/home', (req, res)=>{
