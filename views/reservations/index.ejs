@@ -46,7 +46,7 @@
     th {
     background: #393e46;
     height: 55px;
-    width: 25%;
+    width: 20%;
     font-weight: lighter;
     color: #f7f7f7;
     border: 1px solid #393e46;
@@ -56,7 +56,7 @@
     td {
       background: #f7f7f7;
       height: 55px;
-      width: 25%;
+      width: 20%;
       color: #393e46;
       border: 1px solid #393e46;
       transition: all 0.2s;
@@ -70,7 +70,7 @@
 
 <body>
   <header>
-    <h1>Display Reservations</h1>
+    <h2>Display Reservations</h2>
     <nav>
       <ul>
         <li>
@@ -113,6 +113,7 @@
         <tr>
           <th>NAME</th>
           <th>DATE </th>
+          <th>TIME</th>
           <th>SEATING</th>
           <th>MESSAGE</th>
         </tr>
@@ -120,6 +121,7 @@
 
           <td><a href="/reservations/<%=reservations[i]._id%>"><%=reservations[i].name%></a></td>
           <td><%=reservations[i].date%></td>
+          <td><%=reservations[i].time%></td>
           <td><%=reservations[i].seating%></td>
           <td><%=reservations[i].message%></td>
         </tr>

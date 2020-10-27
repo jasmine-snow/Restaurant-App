@@ -4,7 +4,8 @@ const reservationSchema = mongoose.Schema({
 	name: {type: String, required: true},
   email: {type: String},
   phone: {type: Number, required: true},
-  date: {type: Date, moment: moment, required: true},
+  date: {type: Date, required: true},
+	time: {type: String, required: true},
   seating: {type: Number, required: true},
   message: {type: String}
 

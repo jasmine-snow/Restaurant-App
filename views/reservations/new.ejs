@@ -50,7 +50,7 @@ input, select, textarea {
 
 <body>
 	<header>
-		<h1>Make a reservation</h1>
+		<h2>Make a reservation</h2>
 		<nav>
 			<ul>
 				<li>
@@ -74,7 +74,6 @@ input, select, textarea {
 									<a class="nav-link" href="/RESERVATIONS/index">RESERVATIONS</a>
 								</li>
 							</ul>
-
 						</div>
 					</nav>
 				</li>
@@ -95,21 +94,25 @@ input, select, textarea {
 				</li>
 				<li>
 					<label for="phone">Phone:</label>
-					<input type="phone" id="phone" name="phone" placeholder="Phone" />
+					<input type="number" id="phone" name="phone" placeholder="Phone" />
 				</li>
 				<li>
 					<label for="date">Date:</label>
 					<input type="date" id="date" name="date" placeholder="Date"/>
 				</li>
 				<li>
+					<label for="time">Time:</label>
+					<input type="text" id="time" name="time" placeholder="Time"/>
+				</li>
+				<li>
 					<label for="seating">Seating:</label>
-					<input type="seating" id="seating" name="seating" Placeholder=" Seating" />
+					<input type="text" id="seating" name="seating" Placeholder=" Seating" />
 				</li>
 				<li>
 					<label for="msg">Message:</label>
 					<textarea id="msg" name="message"></textarea>
 				</li>
-
+			</ul>
 				<input type="submit" name="submit" value="SUBMIT">
 	</main>
 </body>
